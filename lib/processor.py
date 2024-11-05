@@ -48,6 +48,10 @@ class Processor:
             elif data_type == "image":
                 value = "https://picsum.photos/200"
 
+            elif data_type == "copy":
+                src =  data_schema["src"]
+                return self.process(route=src)
+
             data[data_name] = value
 
         return data
@@ -65,6 +69,9 @@ if __name__ == "__main__":
             words_path="../random.txt"
             )
     print(processor.process(route="person"))
-    print(processor.process(route="persons"))
+    print("====")
+
+    for row in processor.process(route="persons"):
+        print(row)
 
 

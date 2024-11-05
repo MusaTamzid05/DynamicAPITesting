@@ -1,0 +1,24 @@
+{
+
+    "person" : {
+        "data" : {
+            "name" : "word",
+            "age" : "number",
+            "bio" : "text",
+            "photo" : "image"
+        },
+
+        "count" : 1
+
+    },
+
+    "persons" : {
+        "data" : {
+            "name" : "copy",
+            "src" : "person"
+        },
+
+        "count" : 20
+
+    }
+}
