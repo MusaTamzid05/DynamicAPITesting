@@ -41,6 +41,9 @@ class Processor:
             elif data_type == "number":
                 value = random.randrange(1, 100)
 
+            elif data_type == "date":
+                value = "6th Nov, 2024"
+
             elif data_type == "text":
                 for _ in range(10):
                     value += self._get_random_word() + " "
