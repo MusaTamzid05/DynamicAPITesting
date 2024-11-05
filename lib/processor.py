@@ -13,6 +13,10 @@ class Processor:
 
 
     def process(self, route):
+        if route not in self.data_format:
+            return {"message" : "Invalid route"}
+
+
         current_route = self.data_format[route]
         count = current_route["count"]
 
