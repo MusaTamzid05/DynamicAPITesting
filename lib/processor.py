@@ -14,7 +14,16 @@ class Processor:
 
     def process(self, route):
         current_route = self.data_format[route]
-        return self._process(data_schema=current_route["data"])
+        count = current_route["count"]
+
+        if count == 1:
+            return self._process(data_schema=current_route["data"])
+        else:
+            response = []
+
+            for _ in range(count):
+                response.append(self._process(data_schema=current_route["data"]))
+            return response
 
     def _get_random_word(self):
         return self.words[random.randrange(0, len(self.words) - 1)]
@@ -56,5 +65,6 @@ if __name__ == "__main__":
             words_path="../random.txt"
             )
     print(processor.process(route="person"))
+    print(processor.process(route="persons"))
 
 
