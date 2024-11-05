@@ -20,5 +20,26 @@
 
         "count" : 20
 
+    },
+
+    "v1/v2/v3/university" : {
+        "data" : {
+            "name" : "word",
+            "location" : "word",
+            "founder" : "word",
+            "description" : "word",
+            "founded" : "date"
+
+        },
+        "count" : 1
+    },
+
+    "v1/v2/v3/universities" : {
+        "data" : {
+            "name" : "copy",
+            "src" : "v1/v2/v3/university"
+
+        },
+        "count" : 10
     }
 }
